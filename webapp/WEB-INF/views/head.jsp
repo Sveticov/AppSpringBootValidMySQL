@@ -5,7 +5,7 @@
 
 
 <a href="/user/register">User Register</a>
-<a href="/user/model/?">User model</a>
+<a href="/user/id">User model</a>
 </body>
 
 </html>
