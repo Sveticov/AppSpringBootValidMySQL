@@ -8,6 +8,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import javax.transaction.Transactional;
+import java.util.List;
 
 
 @Repository
@@ -17,4 +18,6 @@ public interface UserModelRepository extends JpaRepository<UserModel, Integer> {
     @Query(value = "select u.* from user_model u where u.name_user_model=:name",nativeQuery = true)
     UserModel selectName(@Param("name") String name);
 
+    @Query(value = " select u.name_user_model,mc.name_carton from user_model u inner join move_cartons mc on mc.id_user_model=u.id_user_model", nativeQuery = true)
+   String[] selectJoin();
 }

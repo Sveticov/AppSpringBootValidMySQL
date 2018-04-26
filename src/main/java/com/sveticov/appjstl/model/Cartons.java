@@ -14,5 +14,5 @@ public class Cartons implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id_carton;
     private String name_carton;
-    private Set<UserModel> userModels;
+   // private Set<UserModel> userModels;
 }
