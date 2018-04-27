@@ -8,8 +8,9 @@
 <body>
 <div class="container">
     <div class="container">
-        <h3>user id ${user}</h3>
+        <h3>user: ${user}</h3>
         <h3>user name ${user.name_user_model}</h3>
+        <h3>${user}</h3>
     </div>
 
     <div class="container-fluid">
