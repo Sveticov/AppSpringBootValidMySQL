@@ -1,6 +1,7 @@
 package com.sveticov.appjstl.controller;
 
 import com.sveticov.appjstl.model.UserModel;
+import com.sveticov.appjstl.repository.CartonsRepositoryImpl;
 import com.sveticov.appjstl.repository.UMRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,6 +19,8 @@ public class UserModelController {
 
     @Autowired
     UMRepository repository;
+    @Autowired
+    CartonsRepositoryImpl cartonsRepository;
 
     @GetMapping("/user/id")
     public String userByIDGET(Model model) {

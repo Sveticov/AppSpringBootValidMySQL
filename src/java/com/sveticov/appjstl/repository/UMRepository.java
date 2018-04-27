@@ -31,9 +31,9 @@ public class UMRepository {
 
     @Transactional
     public void selectJoin() {
-    for(String t: repository.selectJoin()){
-        logger.info(t);
-    }
+ for (String s:repository.selectJoin()){
+     logger.info(s);
+ }
 
 //        repository.selectJoin();
     }

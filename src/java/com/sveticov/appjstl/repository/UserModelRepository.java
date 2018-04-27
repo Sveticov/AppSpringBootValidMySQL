@@ -5,13 +5,13 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 import org.springframework.data.repository.query.Param;
-import org.springframework.stereotype.Repository;
+
 
 import javax.transaction.Transactional;
-import java.util.List;
 
 
-@Repository
+
+
 public interface UserModelRepository extends JpaRepository<UserModel, Integer> {
 
     @Transactional
@@ -19,5 +19,5 @@ public interface UserModelRepository extends JpaRepository<UserModel, Integer> {
     UserModel selectName(@Param("name") String name);
 
     @Query(value = " select u.name_user_model,mc.name_carton from user_model u inner join move_cartons mc on mc.id_user_model=u.id_user_model", nativeQuery = true)
-   String[] selectJoin();
+   String [] selectJoin();
 }
