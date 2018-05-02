@@ -14,7 +14,7 @@
         <div class="form-group">
 
 
-            <form:form method="post" modelAttribute="user1" action="/user/add">
+            <form:form method="post" modelAttribute="user" action="/user/add">
                 <div>
                     <div>
                         <ul>

@@ -53,19 +53,23 @@ public class UserController {
 
     @GetMapping("/user/register")
     public String userRegister(Model model) {
+        UserModel userModel = new UserModel();
+        userModel.setCartons(null);
         model.addAttribute("title", "Add new user");
-        model.addAttribute("user1", new UserModel());
+        model.addAttribute("user", userModel);
         return "user_register";
     }
 
     @PostMapping("/user/add")
-    public String submit(@Validated @ModelAttribute(name = "user1") UserModel userModel, BindingResult result,
+    public String submit(@Validated @ModelAttribute(name = "user") UserModel userModel, BindingResult result,
                          Model model) {
         if (result.hasErrors()) {
+            logger.error( result.toString());
             return "user_register";
         }
+        userModel.setCartons(null);
         repository.saveUserModel(userModel);
-        logger.info(userModel.toString());
+        logger.error(userModel.toString());
         model.addAttribute("user", userModel);
         return "user_data";
     }

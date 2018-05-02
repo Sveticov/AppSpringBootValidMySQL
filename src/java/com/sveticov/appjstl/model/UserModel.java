@@ -16,7 +16,7 @@ public class UserModel implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id_user_model;
     private String name_user_model;
-    @OneToMany(mappedBy = "user_model",cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "user_model",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
     private Set<Cartons> cartons;
 
     public UserModel() {
@@ -26,6 +26,19 @@ public class UserModel implements Serializable {
         this.name_user_model = name_user_model;
     }
 
+public String toString1(){
+        String info="";
+        String common="";
+
+        for(Cartons carton:cartons){
+            common=common+carton.toString();
+        }
+
+
+        info="id: "+id_user_model+" name: "+name_user_model+" cartons: "+common;
+        return info;
+
+}
 
 
 }

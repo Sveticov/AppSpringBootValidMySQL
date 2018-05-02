@@ -14,7 +14,7 @@ public class Cartons implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id_carton;
     private String name_carton;
-  //  private int id_user_model;
+   //private int id_user_model;
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_user_model")
     private UserModel user_model;
