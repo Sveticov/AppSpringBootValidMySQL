@@ -6,9 +6,11 @@
 <ul>
     <li><a href="/user/register">User Register</a></li>
     <li><a href="/user/id">User model</a></li>
-    <li><a href="/us/cart/model">Join</a> </li>
+    <li><a href="/us/cart/model1">Join</a> </li>
 </ul>
-
+<form action="/logout" method="post">
+    <input type="submit" value="Sign Out"/>
+</form>
 
 </body>
 

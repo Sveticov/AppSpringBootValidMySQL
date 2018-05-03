@@ -43,7 +43,7 @@ public class UserModelController {
 
         return "user_page";
     }
-    @GetMapping("/us/cart/model")
+    @GetMapping("/us/cart/model1")
     public String modelUserAndCartonGet(Model model){
 
         model.addAttribute("title","user inner join cartons");
@@ -63,5 +63,10 @@ public class UserModelController {
         if (userModel.getId_user_model() == 0)
             model.addAttribute("modelUserAndCartons", "Not found model (method inner)");
         return "model_user_cartons";
+    }
+
+    @GetMapping("/logout")
+    public String logout(){
+        return "welcome";
     }
 }

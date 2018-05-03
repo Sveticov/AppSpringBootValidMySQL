@@ -1,5 +1,6 @@
 package com.sveticov.appjstl;
 
+import com.sveticov.appjstl.security.WebSecurityConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
